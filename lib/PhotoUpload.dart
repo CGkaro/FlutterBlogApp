@@ -37,9 +37,11 @@ class _uploadPhotoPage extends State<UploadPhoto> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+
       appBar: new AppBar(
         title: new Text("Upload image"),
         centerTitle: true,
+
       ),
       body: new Center(
         child: sampleImage == null ? Text('Select an image') : enableUpload(),
@@ -56,7 +58,7 @@ class _uploadPhotoPage extends State<UploadPhoto> {
     return new Container(
       key: formKey,
       child: new Form(
-          child: Column(
+          child: ListView(
         children: <Widget>[
           Image.file(
             sampleImage,
@@ -80,7 +82,7 @@ class _uploadPhotoPage extends State<UploadPhoto> {
             elevation: 10.0,
             child: Text("Add new Post"),
             textColor: Colors.white,
-            color: Colors.pink,
+            color: Colors.black87,
             onPressed: validateAndSave,
           )
         ],
